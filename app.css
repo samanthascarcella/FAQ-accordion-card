@@ -1,0 +1,177 @@
+/* ---------- MOBILE VIEW ------------- */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 140vh;
+
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(238, 29%, 16%);
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.card {
+    margin: 2rem 1rem;
+    padding: 20px 20px 50px 20px;
+    background-color: white;
+    border-radius: 20px;
+
+    background-image: url(images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px -10px;
+}
+
+.mobile1 {
+    position: relative;
+    top: -9.3rem;
+    width: 100%;
+    height: auto;
+    max-width: 25rem;
+    z-index: 3;
+}
+
+.desk1,
+.desk2,
+.desk3 {
+    display: none;
+}
+
+.header {
+    height: 7.5rem;
+}
+
+.card-body h1 {
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.card-body p {
+    color: hsl(240, 6%, 50%);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+details summary {
+    width: 100%;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    color: hsl(237, 12%, 33%);
+    font-weight: 400;
+    font-size: 12px;
+    padding: 15px 0;
+}
+
+details summary:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+summary:before {
+    content: url(images/icon-arrow-down.svg);
+    position: relative;
+    top: -5px;
+    color: red;
+    float: right;
+    font-size: 1.1rem;
+    margin: 0 10px 0 30px;
+}
+
+details[open] summary:before {
+    transform: rotate(180deg);
+    font-weight: 700;
+}
+
+details[open] summary {
+    font-weight: 700;
+    border-bottom: 0;
+}
+
+details:last-of-type[open] p {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+details p {
+    padding-bottom: 10px;
+}
+
+/* ---------- DESKTOP VIEW ------------- */
+@media (min-width: 900px) {
+
+    .container {
+        max-width: 900px;
+        height: auto;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        padding: 50px;
+
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -500px -250px;
+    }
+
+    .card-body {
+        padding: 30px 50px 0 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .card-body h1 {
+        text-align: left;
+    }
+
+    .header {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .mobile1,
+    .mobile2 {
+        display: none;
+    }
+
+    .parent {
+        position: relative;
+    }
+
+    .desk1 {
+        display: inline;
+        position: relative;
+        right: 150px;
+        bottom: 10px;
+        z-index: 2;
+    }
+
+    .child {
+        position: absolute;
+    }
+
+    .desk2 {
+        display: inline;
+        position: absolute;
+        z-index: 3;
+        bottom: 65px;
+        right: -65px;
+    }
+
+}
